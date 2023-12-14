@@ -1,0 +1,12 @@
+@use "./partials/resets" as *;
+
+.App {
+  margin: 0;
+  background: url("./assets/images/main-background.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+}
