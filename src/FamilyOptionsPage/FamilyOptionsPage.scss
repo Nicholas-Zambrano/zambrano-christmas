@@ -1,118 +1,261 @@
-.familyOptionsPage {
-    text-align: center;
-    background-color: hsl(197, 71%, 73%);
-    padding: 50px;
+
+// @use "../partials/mixins" as *;
+// @use "../partials/variables" as *;
+// .familyOptionsPage {
+//     text-align: center;
+//     background-color: hsl(197, 71%, 73%);
+//     padding: 50px;
+
+//     @include mobile {
+//       padding: 20px;
+//     }
   
-    .familyOptionsPage__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-    .familyOptionsPage__title {
-        font-size: 3em;
-        color: #ff4500; // Orange Red
-        margin-top: 0;
-        font-family: 'Lobster', cursive; /* Add a Christmas font */
-        font-weight: bold;
-      }
+//     .familyOptionsPage__header {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         margin-bottom: 20px;
+//       }
+//     .familyOptionsPage__title {
+//         font-size: 3em;
+//         color: #ff4500; // Orange Red
+//         margin-top: 0;
+//         font-family: 'Lobster', cursive; /* Add a Christmas font */
+//         font-weight: bold;
+//       }
     
-      .familyOptionsPage__buttons {
-        display: flex;
-        gap: 20px;
+//       .familyOptionsPage__buttons {
+//         display: flex;
+//         gap: 20px;
     
-        .familyOptionsPage__button {
-          font-size: 1.5em;
-          padding: 10px 20px;
-          background-color: #ce68bf; // Sky Blue
-          color: #fff;
-          text-decoration: none;
-          border-radius: 5px;
-          transition: background-color 0.3s, color 0.3s;
+//         .familyOptionsPage__button {
+//           font-size: 1.5em;
+//           padding: 10px 20px;
+//           background-color: #ce68bf; // Sky Blue
+//           color: #fff;
+//           text-decoration: none;
+//           border-radius: 5px;
+//           transition: background-color 0.3s, color 0.3s;
     
-          &:hover {
-            background-color: #5cacee; // Light Sky Blue (hover color)
-          }
-        }
-      }
+//           &:hover {
+//             background-color: #5cacee; // Light Sky Blue (hover color)
+//           }
+//         }
+//       }
     
-    .familyOptionsPage__cards {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      min-height: 60vh;
+//     .familyOptionsPage__cards {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       flex-wrap: wrap;
+//       min-height: 60vh;
+
+//       @include mobile {
+//         flex-direction: column;
+//         align-items: center;
+//       }
   
-      .familyOptionsPage__card {
-        height: 30rem;
-        width: 20rem;
-        text-decoration: none;
-        color: #333;
-        border: 2px solid #87ceeb; // Sky Blue
-        border-radius: 10px;
-        margin: 10px;
-        position: relative;
-        overflow: hidden;
-        transition: background-color 0.3s, color 0.3s;
+//       .familyOptionsPage__card {
+//         height: 30rem;
+//         width: 20rem;
+//         text-decoration: none;
+//         color: #333;
+//         border: 2px solid #87ceeb; // Sky Blue
+//         border-radius: 10px;
+//         margin: 10px;
+//         position: relative;
+//         overflow: hidden;
+//         transition: background-color 0.3s, color 0.3s;
   
-        &:hover {
-          background-color: #87ceeb;
-          color: #fff;
-        }
+//         &:hover {
+//           background-color: #87ceeb;
+//           color: #fff;
+//         }
   
-        img {
-          font-size: 3em;
-          margin-bottom: 10px;
-          width: 100%;
-          object-fit: cover; /* Maintain aspect ratio */
-          object-position: center;
-          border-radius: 10px 10px 0 0; /* Rounded top corners */
-          height: 30rem;
-        }
+//         img {
+//           font-size: 3em;
+//           margin-bottom: 10px;
+//           width: 100%;
+//           object-fit: cover; /* Maintain aspect ratio */
+//           object-position: center;
+//           border-radius: 10px 10px 0 0; /* Rounded top corners */
+//           height: 30rem;
+//         }
   
-        p {
-          font-size: 1.5em;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-          margin: 0;
-          color: #fff;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
-          z-index: 1; /* Ensure text is above the image */
-        }
-      }
+//         p {
+//           font-size: 1.5em;
+//           position: absolute;
+//           top: 50%;
+//           left: 50%;
+//           transform: translate(-50%, -50%);
+//           width: 100%;
+//           margin: 0;
+//           color: #fff;
+//           text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+//           z-index: 1; /* Ensure text is above the image */
+//         }
+//       }
 
  
   
-      // Individual card styles
-      .familyOptionsPage__card--yanez {
-        // background-color: #ffcc66; // Light Orange
-      }
+//       // Individual card styles
+//       .familyOptionsPage__card--yanez {
+//         // background-color: #ffcc66; // Light Orange
+//       }
   
-      .familyOptionsPage__card--bustillos {
-        // background-color: #99ccff; // Light Blue
-      }
+//       .familyOptionsPage__card--bustillos {
+//         // background-color: #99ccff; // Light Blue
+//       }
   
-      .familyOptionsPage__card--reascos {
-        // background-color: #ff9999; // Light Red
-        // height: 100rem;
-      }
+//       .familyOptionsPage__card--reascos {
+//         // background-color: #ff9999; // Light Red
+//         // height: 100rem;
+//       }
   
-      .familyOptionsPage__card--nacatos {
-        // background-color: #99ff99; // Light Green
-      }
-      .familyOptionsPage__card--carolina {
-        // height: 20rem;
+//       .familyOptionsPage__card--nacatos {
+//         // background-color: #99ff99; // Light Green
+//       }
+//       .familyOptionsPage__card--carolina {
+//         // height: 20rem;
 
-      }
+//       }
 
+//     }
+//     &__familyTitle{
+//         font-family: 'Lobster', cursive; /* Add a Christmas font */
+//         font-weight: bold;
+//         font-weight: 700;
+//       }
+//   }
+@use "../partials/mixins" as *;
+@use "../partials/variables" as *;
+
+.familyOptionsPage {
+  text-align: center;
+  background-color: hsl(197, 71%, 73%);
+  padding: 50px;
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  .familyOptionsPage__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .familyOptionsPage__title {
+    font-size: 3em;
+    color: #ff4500; // Orange Red
+    margin-top: 0;
+    font-family: 'Lobster', cursive; /* Add a Christmas font */
+    font-weight: bold;
+  }
+
+  .familyOptionsPage__buttons {
+    display: flex;
+    gap: 20px;
+
+    .familyOptionsPage__button {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      background-color: #ce68bf; // Sky Blue
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: #5cacee; // Light Sky Blue (hover color)
+      }
     }
-    &__familyTitle{
-        font-family: 'Lobster', cursive; /* Add a Christmas font */
-        font-weight: bold;
-        font-weight: 700;
+  }
+
+  .familyOptionsPage__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 60vh;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .familyOptionsPage__card {
+      height: 30rem;
+      width: 20rem;
+      text-decoration: none;
+      color: #333;
+      border: 2px solid #87ceeb; // Sky Blue
+      border-radius: 10px;
+      margin: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.5s; /* Add transition for the flip effect */
+
+      &:hover {
+        transform: rotateY(180deg); /* Flip the card on hover */
       }
+
+      img {
+        font-size: 3em;
+        margin-bottom: 10px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px 10px 0 0;
+        height: 30rem;
+      }
+
+      p {
+        font-size: 1.5em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        margin: 0;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+    }
+
+    // Individual card styles
+    .familyOptionsPage__card--yanez {
+      // background-color: #ffcc66; // Light Orange
+    }
+
+    .familyOptionsPage__card--bustillos {
+      // background-color: #99ccff; // Light Blue
+    }
+
+    .familyOptionsPage__card--reascos {
+      // background-color: #ff9999; // Light Red
+      // height: 100rem;
+    }
+
+    .familyOptionsPage__card--nacato {
+      // background-color: #99ff99; // Light Green
+    }
+
+    .familyOptionsPage__card--carolina {
+      // height: 20rem;
+    }
+  }
+
+  &__familyTitle {
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-weight: 700;
   }
   
+  // Add the flipped state class
+  &__card--flipped {
+    transform: rotateY(180deg);
+  }
+}
